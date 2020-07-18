@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">SinkTheShip</string>
+
+    <string name="ship_number">Enter the number of Pirate ships</string>
+    <string name="loot">Enter the Loot of each ship</string>
+    <string name="war_end">War will end in</string>
+    <string name="no_war">There will be no war</string>
+    <string name="days">days</string>
+    <string name="day">day</string>
+    <string name="comma">, </string>
+</resources>

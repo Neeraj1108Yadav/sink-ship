@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/editText_shipCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/ship_number"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/button_shipCount"
+        style="@style/CommonText" />
+
+    <Button
+        android:id="@+id/button_shipCount"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/editText_shipCount"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Submit"
+        style="@style/CommonButton"/>
+
+    <EditText
+        android:id="@+id/editText_shipLoot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/loot"
+        app:layout_constraintTop_toBottomOf="@id/editText_shipCount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/button_loot"
+        android:visibility="gone"
+        style="@style/CommonText"/>
+
+    <Button
+        android:id="@+id/button_loot"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/editText_shipCount"
+        app:layout_constraintTop_toBottomOf="@id/button_shipCount"
+        android:text="Enter"
+        android:visibility="gone"
+        style="@style/CommonButton"/>
+
+    <TextView
+        android:id="@+id/textView_loot"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/editText_shipLoot"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/button_startWar"
+        app:layout_constraintEnd_toStartOf="@id/button_startWar"
+        android:visibility="gone"
+        android:layout_marginStart="@dimen/high_margin"
+        android:layout_marginEnd="@dimen/high_margin"
+        android:padding="@dimen/normal_padding"
+        android:fontFamily="@font/gotham_narrow"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/big_text_size"/>
+
+    <Button
+        android:id="@+id/button_startWar"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/editText_shipCount"
+        app:layout_constraintTop_toBottomOf="@id/button_loot"
+        android:text="Start War"
+        android:visibility="gone"
+        style="@style/CommonButton"/>
+
+    <TextView
+        android:id="@+id/textView_days"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/textView_loot"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/button_reset"
+        app:layout_constraintEnd_toStartOf="@id/button_reset"
+        android:layout_marginStart="@dimen/high_margin"
+        android:layout_marginEnd="@dimen/high_margin"
+        android:padding="@dimen/normal_padding"
+        android:fontFamily="@font/gotham_narrow"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/big_text_size"/>
+
+    <Button
+        android:id="@+id/button_reset"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        app:layout_constraintStart_toStartOf="@id/button_shipCount"
+        app:layout_constraintTop_toBottomOf="@id/button_startWar"
+        android:text="RESET"
+        style="@style/CommonButton"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
